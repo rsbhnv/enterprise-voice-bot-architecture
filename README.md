@@ -83,12 +83,14 @@ significantly reducing handling time.
 ### Integration Flow (Textual)
 
 
-
+```
 Voice Conversation System → Integration Service (Webhook / Endpoint)
 ↓
 CRM System
 ↓
 IVR → Routing to Human Agent
+```
+
 
 ## 3. Infrastructure Touchpoints (Generic)
 
