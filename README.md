@@ -36,13 +36,16 @@ all data with a unique conversation identifier (UCID).
 
 ### High-Level Architecture Flow (Textual)
 
+```
 Customer → IVR → Voice Conversation System
-↓
-Conversation Processing / Data Validation
-↓
-CRM Update (Interaction Logging)
-↓
-Return to IVR → Human Agent
+                       ↓
+               Conversation Processing / Data Validation
+                       ↓
+                 CRM Update (Interaction Logging)
+                       ↓
+               Return to IVR → Human Agent
+```
+
 
 
 ---
