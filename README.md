@@ -43,3 +43,40 @@ Conversation Processing / Data Validation
 CRM Update (Interaction Logging)
 ↓
 Return to IVR → Human Agent
+
+
+---
+
+## 2. Integration & Process Flow
+
+### End-to-End Process (Generic and Clean)
+
+**1. Call Reception in IVR**  
+The IVR receives the call, performs basic identification, and assigns
+a unique conversation identifier (UCID).
+
+**2. Transfer to Voice Conversation System**  
+The customer is transferred to the conversation system along with the UCID.
+
+**3. Data Collection and Validation**  
+The system asks the customer a limited set of questions
+(e.g. order number, last name) and attempts validation against
+a relevant internal information system.
+
+**4. CRM Documentation**  
+Conversation data (transcript or summary) is sent to the CRM system.
+The CRM creates or updates an interaction record based on the UCID.
+
+**5. Return to IVR**  
+Once information collection is completed, the customer is returned
+to the IVR at the appropriate interaction point.
+
+**6. Human Agent Handling**  
+The IVR presents the collected information to the human agent,
+significantly reducing handling time.
+
+---
+
+### Integration Flow (Textual)
+
+
