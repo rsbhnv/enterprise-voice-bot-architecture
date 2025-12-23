@@ -86,3 +86,60 @@ Voice Conversation System → Integration Service (Webhook / Endpoint)
 CRM System
 ↓
 IVR → Routing to Human Agent
+
+## 3. Infrastructure Touchpoints (Generic)
+
+The architecture intentionally minimizes infrastructure exposure and avoids
+tight coupling to specific products, vendors, or cloud services.
+This approach supports scalability, governance, and long-term maintainability.
+
+### Internal Integration Service
+An enterprise-level integration endpoint that acts as a controlled interface
+between the voice conversation system and downstream systems.
+
+Responsibilities include:
+- Receiving conversation transcripts
+- Receiving conversation summaries
+- Transferring additional interaction metadata  
+for CRM consumption and enrichment.
+
+This layer provides isolation, validation, and flexibility for future changes.
+
+---
+
+### CRM Interface
+An internal organizational component responsible for:
+- Receiving payloads from the integration service
+- Creating or updating interaction records
+- Associating conversation data with a unique conversation identifier (UCID)
+
+This ensures consistent documentation and availability of call context
+for human agents.
+
+---
+
+### Internal Logging Mechanism
+A lightweight logging mechanism designed to support:
+- Operational visibility
+- Troubleshooting and incident investigation
+- Basic auditing of conversation-related events
+
+The focus is on traceability rather than tool-specific implementation.
+
+---
+
+### Operational Monitoring (Generic)
+Generic monitoring capabilities are assumed to track:
+- Request intake and processing status
+- Success and failure events
+- High-level operational health indicators
+
+Specific monitoring tools are intentionally not referenced.
+
+---
+
+## Notes
+- All architectural descriptions and flows are presented at a generic level
+  to preserve organizational confidentiality.
+- This project emphasizes architectural ownership, system integration design,
+  and cross-team technical coordination rather than conversational content implementation.
